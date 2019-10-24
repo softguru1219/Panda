@@ -1,0 +1,132 @@
+.homepage {
+  .page-logo {
+    max-width: 200px;
+  }
+
+  .products-wrapper {
+    padding: 1rem 0 2rem;
+  }
+
+  .prod-wrapper {
+    @media (min-width: 1024px) {
+      flex: 0 0 20% !important;
+      max-width: 20% !important;
+    }
+    @media (min-width: 1440px) {
+      flex: 0 0 16.66666% !important;
+      max-width: 16.66666% !important;
+    }
+  }
+
+  .recommend-products .home-products-header {
+    h4,
+    h4 .check-more.span-link,
+    .ribbon,
+    .ribbon::after {
+      background: $color-red1;
+    }
+  }
+
+  .recommend-products .home-products-header {
+    h4,
+    h4 .check-more.span-link,
+    .ribbon,
+    .ribbon::after {
+      background: $color-red1;
+      color: #fff;
+    }
+  }
+
+  .today-discount-products .home-products-header {
+    h4,
+    h4 .check-more.span-link,
+    .ribbon,
+    .ribbon::after {
+      background: $color-yellow1;
+      color: $color-black1;
+    }
+  }
+
+  .time-discount-products .home-products-header {
+    h4,
+    h4 .check-more.span-link,
+    .ribbon,
+    .ribbon::after{
+      background: $color-blue1;
+      color: #fff;
+    }
+  }
+
+  .general-discount-products .home-products-header {
+    h4,
+    h4 .check-more.span-link,
+    .ribbon,
+    .ribbon::after{
+      background: $color-green1;
+      color: $color-black2;
+    }
+
+  }
+
+  .all-discount-products .home-products-header {
+    h4,
+    h4 .check-more.span-link,
+    .ribbon,
+    .ribbon::after {
+      background: $color-black3;
+      color: #fff;
+    }
+  }
+
+  .home-products-header {
+    margin-bottom: 1rem;
+    h4, .ribbon {
+      float: left;
+    }
+
+    .ribbon {
+      float: left;
+      display: block;
+      height: 4rem;
+      width: 2rem;
+      overflow: hidden;
+      position: relative;
+
+      &::after {
+        border-bottom-left-radius: 50%;
+        border: solid 2rem #fff;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+      }
+    }
+
+    h4 {
+      border-top-left-radius: 1.5rem;
+      border-top-right-radius: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 900;
+      height: 4rem;
+      padding: 0 2rem;
+      position: relative;
+      width: calc(100% - 2rem);
+      line-height: 4rem;
+
+      .check-more {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        height: 4rem;
+        position: absolute;
+        right: 1.5rem;
+        top: 0;
+      }
+    }
+
+    .ribbon {
+      width: 2rem;
+      display: block;
+    }
+  }
+}

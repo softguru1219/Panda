@@ -1,0 +1,54 @@
+.submenu {
+  transition: height .3s ease-in-out;
+  width: 100%;
+  background: $bg-color-submenu;
+  width: 15rem;
+
+  .submenu-wrapper {
+    height: 600px;
+    position: relative;
+    @include bs-content;
+
+
+    .megamenu-wrapper {
+      position: absolute;
+      top: 0;
+      width: 15rem;
+      height: 100%;
+      left: 100%;
+    }
+  }
+
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  .subcat-item {
+    line-height: 2rem;
+    position: relative;
+    padding-left: 1rem;
+    width: 15rem;
+    display: block;
+    > i {
+      line-height: 2rem;
+      position: absolute;
+      right: 1rem;
+      top: 0;
+    }
+
+    &:hover, &.hover {
+      background: #fff;
+      > i {
+        color: $color-topbar-hover;
+      }
+
+      > span {
+        color: $color-black3;
+        &:hover {
+          color: $color-topbar-hover;
+        }
+      }
+    }
+  }
+}

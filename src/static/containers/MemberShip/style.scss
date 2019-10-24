@@ -1,0 +1,159 @@
+.membership-container {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+
+  .membership {
+    background: #fff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: inline-block;
+    padding: 0rem 0 2rem;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    transition: all .1s ease;
+
+    &:hover {
+      //transform: scale(1.1);
+    }
+
+    .membership-title {
+      padding: 1.5rem 0 .5rem;
+      font-size: 1.2rem;
+      
+      color: #fff;
+    }
+
+    .membership-price {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: .5rem 0;
+      position: relative;
+      margin-bottom: 2rem;
+
+      &::after {
+        content: "";
+        border-top: solid 1rem #194085;
+        width: 100%;
+        display: block;
+
+        position: absolute;
+        top: 100%;
+      }
+    }
+
+    .btn-groups {
+      padding: 1rem 0;
+    }
+
+    .membership-features {
+      display: inline-block;
+      text-align: left;
+      padding: 1rem 0;
+      min-height: 13rem;
+      max-width: calc(100% - 4rem);
+
+      > li {
+        margin-bottom: .5rem;
+        position: relative;
+        padding-left: 1.5rem;
+        line-height: 1.5rem;
+        &::before {
+          left: 0;
+          content: "\F00C";
+          font-family: FontAwesome;
+          position: absolute;
+        }
+      }
+    }
+
+    .btn-groups {
+      padding: 0 2rem;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  .free {
+    .membership-title,
+    .membership-price {
+      background: #194085;
+    }
+
+    .membership-price::after {
+      border-top-color: #194085;
+    }
+
+    .membership-features > li::before {
+      color: #194085;
+    }
+
+    .btn {
+      background: #194085;
+      border: solid 1px #194085;
+      color: #fff;
+
+      &:hover {
+        background: #fff;
+        color: #194085;
+      }
+    }
+
+  }
+
+  .basic {
+    .membership-title,
+    .membership-price {
+      background: #f7d000;
+    }
+
+    .membership-price::after {
+      border-top-color: #f7d000;
+    }
+
+    .membership-features > li::before {
+      color: #f7d000;
+    }
+
+    .btn {
+      background: #f7d000;
+      border: solid 1px #f7d000;
+      color: #fff;
+
+      &:hover {
+        background: #fff;
+        color: #f7d000;
+      }
+    }
+  }
+
+  .pro {
+    .membership-title,
+    .membership-price {
+      background: #fc1934;
+    }
+
+    .membership-price::after {
+      border-top-color: #fc1934;
+    }
+
+    .membership-features > li::before {
+      color: #fc1934;
+    }
+  }
+
+
+  .btn {
+    background: #fc1934;
+    border: solid 1px #fc1934;
+    color: #fff;
+
+    &:hover {
+      background: #fff;
+      color: #fc1934;
+    }
+  }
+}

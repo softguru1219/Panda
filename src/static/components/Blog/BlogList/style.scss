@@ -1,0 +1,18 @@
+.tb-blog {
+  .table-head {
+    border-bottom: dotted 1px $border-color-panel-head;
+    padding-left: 15px;
+    padding-right: 15px;
+    .input-group {
+      max-width: 300px;
+    }
+  }
+
+  .table td {
+    vertical-align: middle;
+  }
+  .blog-img {
+    max-height: 100px;
+    width: auto;
+  }
+}

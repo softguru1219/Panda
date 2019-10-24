@@ -1,0 +1,55 @@
+.inline-filter {
+  padding: 0 2rem;
+
+  background: $bg-color-inline-filter;
+  @include bs-content;
+
+  @media (min-width: $desktop-resolution) {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  ul.sort {
+    margin: 0 -2rem;
+    position: relative;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+
+      &.pagination-info {
+        right: 1rem;
+        position: absolute;
+        bottom: 0;
+
+        line-height: 3rem;
+        height: 3rem;
+
+        > button:hover:enabled {
+          color: $color-red1 !important;
+        }
+      }
+    }
+    .btn {
+      > i {
+
+        &.fa-sort-up {
+          top: calc(50% - 0.3rem);
+        }
+        &.fa-sort-down {
+          top: calc(50% - 0.7rem);
+        }
+        &.fa-sort {
+          color: $color-vertical-tab-text;
+        }
+      }
+
+      &.active {
+        color: $color-red1;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.membership {
+  padding: 2rem;
+  .member-line {
+    position: relative;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    border: solid 1px #eee;
+    cursor: pointer;
+
+    h5 {
+      font-size: 1.2rem;
+    }
+
+    span.price {
+      font-size: 1.5rem;
+    }
+
+    ul.member-features {
+      display: inline-block;
+      list-style: circle;
+      text-align: left;
+      > li {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .check-mark {
+      position: absolute;
+      left: 3rem;
+      font-size: 1.2rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .2s ease;
+    }
+
+    &.active, &:hover {
+      color: $color-topbar-hover;
+      .check-mark {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &.active {
+      border: solid 1px $color-topbar-hover;
+    }
+  }
+
+  .member-line,
+  .member-line-header {
+    padding-left: 5rem;
+    > div {
+      text-align: center;
+    }
+  }
+
+  .member-line-header {
+    font-size: 1.2rem;
+  }
+}

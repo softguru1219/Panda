@@ -1,0 +1,14 @@
+.blog-grid {
+  .blog-summary {
+    cursor: pointer;
+    
+    .sub-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    p {
+      padding-bottom: 2rem;
+    }
+  }
+}

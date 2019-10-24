@@ -1,0 +1,83 @@
+.menu-item {
+  background: transparent;
+  .item-name {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+
+    display: block;
+    float: left;
+    font-weight: 700;
+    line-height: 3rem;
+    white-space: pre;
+    width: calc(100% - 2rem);
+  }
+  .ribbon {
+    float: left;
+    display: block;
+    height: 3rem;
+    width: 2rem;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      border-bottom-left-radius: 50%;
+      border: solid 2rem #fff;
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+    }
+  }
+
+  &.col {
+    padding: 0;
+    margin-right: -2rem;
+  }
+
+  &.index1 {
+    .item-name,
+    .ribbon,
+    .ribbon::after{
+      background: $color-red1;
+    }
+
+    .item-name {
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &.index2 {
+    .item-name,
+    .ribbon,
+    .ribbon::after{
+      background: $color-yellow1;
+      color: $color-black1 !important;
+    }
+  }
+
+  &.index3 {
+    .item-name,
+    .ribbon,
+    .ribbon::after{
+      background: $color-blue1;
+    }
+  }
+
+  &.index4 {
+    .item-name,
+    .ribbon,
+    .ribbon::after{
+      background: $color-green1;
+      color: $color-black2 !important;
+    }
+  }
+
+  &.index5 {
+    .item-name,
+    .ribbon,
+    .ribbon::after{
+      background: $color-black3;
+    }
+  }
+}

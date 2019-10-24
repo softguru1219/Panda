@@ -1,0 +1,55 @@
+.discount-products {
+  padding: 0 0.5rem;
+  @include bs-content;
+  > h3 {
+    border-bottom: solid 1px $color-silver;
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  .mini-product.product {
+    padding: 1rem;
+    border-bottom: solid 1px $color-silver;
+    display: block;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .prod-img, .prod-desc {
+
+      @media (min-width: 992px) {
+        float: left;
+      }
+    }
+    .prod-img {
+      @media (min-width: 992px) {
+        width: 40%;
+      }
+      min-width: 50px;
+    }
+    .prod-desc {
+      max-width: calc(100% - 50px);
+      padding: 0.5rem;
+      @media (min-width: 992px) {
+        width: 60%;
+      }
+      h4 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+      .prod-price {
+        font-size: 1.5rem;
+        color: $color-red-dark;
+        @media (min-width: 992px) {
+          display: block;
+        }
+      }
+      span {
+        vertical-align: bottom;
+      }
+    }
+
+  }
+}

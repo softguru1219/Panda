@@ -1,0 +1,26 @@
+.compare-product-list {
+  > .row {
+
+    .prod-img {
+      max-width: 200px;
+    }
+
+    > div {
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
+
+    &:nth-child(even) {
+      > div {
+        background: $color-white-dark;
+
+      }
+    }
+  }
+  .sub-title {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    padding: .5rem 0;
+    border-bottom: solid 1px $color-sub-title-border;
+  }
+}

@@ -1,0 +1,60 @@
+.vertical-tabs {
+
+  > .row > .col-12 {
+
+    > .tab-list {
+      height: 100%;
+    }
+
+    > .tab-list, 
+    > .tab-content {
+      @include bs-content;
+      background: $bg-color-account-tab;
+    }
+    
+    > .tab-content {
+      height: 100%;
+    }
+    > .tab-list > .tab-list-item {
+      color: $color-vertical-tab-text;
+      cursor: pointer;
+  
+      &:hover,
+      &.tab-list-active {
+  
+        @media (min-width: $desktop-resolution) {
+          border-right: solid 3px $color-vertical-tab-text-hover;
+          margin-right: -1px;
+        }
+  
+        @media (max-width: $desktop-resolution) {
+          border-bottom: solid 3px $color-vertical-tab-text-hover;
+          margin-bottom: -1px;
+        }
+        
+        color: $color-vertical-tab-text-hover;
+      }
+  
+      &:hover {
+        background: $bg-color-vertical-tab-text-hover;
+      }
+  
+      a {
+        line-height: 3rem;
+        @media (min-width: $desktop-resolution) {
+          padding: 0 2rem;
+        }
+        @media (max-width: $desktop-resolution) {
+          padding: 0 .5rem;
+        }
+      }
+  
+      @media (max-width: $desktop-resolution) {
+        display: block;
+        float: left;
+  
+      }
+  
+    }
+  }
+}

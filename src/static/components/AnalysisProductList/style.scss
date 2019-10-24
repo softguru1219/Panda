@@ -1,0 +1,66 @@
+.analysis-products {
+  padding: 2rem 15px;
+  .analysis-body,
+  .analysis-header {
+    .analysis-item {
+      padding: 1rem 0;
+      border-bottom: 1px dotted $color-silver-dark;
+    }
+  }
+
+  .prod-title {
+    /* hide text if it more than N lines  */
+    overflow: hidden;
+    /* for set '...' in absolute position */
+    position: relative;
+    /* use this value to count block height */
+    line-height: 1.3rem;
+    /* max-height = line-height (1.2) * lines max number (3) */
+    max-height: 3.7rem;
+    /* fix problem when last visible word doesn't adjoin right side  */
+    text-align: justify;
+    /* place for '...' */
+    margin-right: -1rem;
+    padding-right: 1rem;
+
+    &:before {
+      content: '...';
+      position: absolute;
+      right: 1rem;
+      //right: 0;
+      bottom: 0;
+      line-height: 1.4rem;
+      font-size: 1.4rem;
+      background: white;
+    }
+
+    &:after {
+      /* points in the end */
+      content: '';
+      /* absolute position */
+      position: absolute;
+      /* set position to right bottom corner of text */
+      right: 1rem;
+      /* set width and height */
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-top: 0.2rem;
+      /* bg color = bg color under block */
+      background: white;
+    }
+  }
+  .prod-img img {
+    max-width: 100px;
+  }
+
+  .cb-wish {
+    font-size: 1.5rem;
+  }
+
+  .analysis-body {
+    max-height: 40rem;
+    overflow: auto;
+    position: relative;
+    margin: 0 0 3rem;
+  }
+}

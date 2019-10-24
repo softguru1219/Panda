@@ -1,0 +1,121 @@
+.category-menu {
+  height: 3.5rem;
+
+  .search-container {
+    @media (min-width: $desktop-resolution) {
+      display: none;
+    }
+  }
+
+  .category-list {
+    ul {
+      margin-left: -2rem;
+      min-width: 1980px;
+      width: auto !important;
+      li {
+        float: left;
+        display: block;
+        .cat-item {
+          color: $color-black1;
+          line-height: 3.5rem;
+          padding: 0 2rem;
+
+          &:hover {
+            color: $color-red1;
+          }
+        }
+      }
+    }
+
+    @media (max-width: $mobile-resolution) {
+      display: inline-block;
+      width: calc(100% - 9rem);
+      vertical-align: middle;
+    }
+  }
+
+
+  .menu-brand {
+    width: 4.5rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .btn-open-sidebar {
+    height: 3rem;
+    width: 4.5rem;
+    margin-left: 0;
+    display: inline-block;
+    vertical-align: middle;
+
+    @media (min-width: $desktop-resolution) {
+      display: none;
+    }
+
+    &.btn-icon > i {
+      color: $color-black3;
+      font-size: 2rem;
+      height: 3rem;
+      line-height: 3rem;
+    }
+  }
+
+  .cat-item {
+    color: $color-black3;
+    > span {
+      color: $color-black3;
+    }
+    display: block;
+    white-space: pre;
+  }
+
+  .category-dropdown {
+    float: left;
+    padding-right: 2rem;
+    padding-top: .5rem;
+    width: 4.5rem;
+    .cat-item {
+      line-height: 2rem;
+      position: relative;
+      padding-left: 1rem;
+      width: 15rem;
+      > i {
+        line-height: 2rem;
+        position: absolute;
+        right: 1rem;
+        top: 0;
+      }
+
+      &:hover, &.hover {
+        background: $bg-color-submenu;
+        > i {
+          color: $color-topbar-hover;
+        }
+
+        > span {
+          color: #fff;
+          &:hover {
+            color: $color-topbar-hover;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-login.span-link {
+    height: 3rem;
+    i {
+      color: $color-black;
+      font-size: 2rem;
+      height: 3rem;
+      line-height: 3rem;
+    }
+  }
+
+  .subcat-wrapper {
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    left: calc(15rem + 15px);
+  }
+}

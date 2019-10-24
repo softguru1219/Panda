@@ -1,0 +1,64 @@
+.current-price {
+  color: $color-red1;
+  font-size: 1.5rem;
+  vertical-align: bottom;
+  font-weight: bold;
+
+  &.sm {
+    font-size: 1rem;
+  }
+
+  em {
+    font-size: 1rem;
+    margin-right: .5rem;
+  }
+}
+
+.old-price {
+  color: $color-black1;
+  font-size: 1rem;
+
+  em {
+    font-size: 1rem;
+    margin-right: .5rem;
+  }
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: inherit;
+  color: inherit;
+  opacity: inherit;
+}
+
+.custom-arrow {
+  font-size: 1rem;
+  top: auto;
+  bottom: -25px;
+  position: absolute;
+}
+
+.product {
+  .product-hover {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-product-overlay;
+    transition: all .1s ease-in;
+    > div {
+      width: 100%;
+    }
+  }
+  
+  
+  &:hover {
+
+    .product-hover {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

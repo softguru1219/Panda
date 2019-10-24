@@ -1,0 +1,39 @@
+.topbar {
+  background: $color-white-dark;
+  color: $color-silver-light;
+
+  .container {
+    @media(min-width: 1280px) {
+      max-width: 80vw;
+    }
+    > div {
+      margin: 0 -2rem;
+    }
+  }
+
+  .toplinks {
+    li {
+      float: left;
+      padding: 0.86rem 0;
+      span {
+        border-left: solid 1px $color-silver-light;
+        color: $color-silver-light;
+        display: block;
+        line-height: 1;
+        padding: 0 1.5rem;
+
+        &:hover {
+          color: $color-red-dark;
+        }
+      }
+
+      &:first-child span {
+        border-left: none;
+      }
+    }
+
+    &.right {
+      float: right;
+    }
+  }
+}

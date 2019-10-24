@@ -1,0 +1,33 @@
+.related-product-list {
+    padding: .5rem 1.5rem  2rem;
+    
+    h5 {
+        border-bottom: dotted 1px $color-silver;
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    @media (min-width: 992px) {
+        border-left: dotted 1px $color-silver;
+    }
+
+    .custom-arrow-prev {
+        left: calc(50% - 25px);
+        right: auto;
+    }
+    .custom-arrow-next {
+        left: auto;
+        right: calc(50% - 25px);
+    }
+
+    .custom-arrow {
+        color: #ddd;
+        top: auto;
+        bottom: -25px;
+        &:hover, &:focus
+        { 
+            color: #777 !important;
+        }
+    }
+    
+}

@@ -1,0 +1,20 @@
+.mini-product {
+    padding: 0 1rem;
+    text-align: center;
+    position: relative;
+    .product-img {
+        position: relative;
+        .action-view {
+            padding: 0.5rem 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: $color-overlay-bg;
+            color: $color-action-view;
+        }
+    }
+    h4 {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+}

@@ -1,0 +1,32 @@
+Django==1.11.4
+django-extensions==1.8.1
+
+django-disposable-email-checker==1.2.1
+
+# PostgresSQL
+psycopg2==2.7.3
+
+# serve files
+whitenoise==3.3.0
+
+# Rest Framework
+djangorestframework==3.6.4
+
+# Sentry
+raven==6.1.0
+
+# for date processing
+python-dateutil==2.6.1
+
+django-rest-knox==3.0.3
+
+# Django Filter
+django-filter==2.1.0
+
+# for Image Field
+Pillow==5.4.1
+
+# For schedule job.
+celery==4.2.1
+django-celery-beat==1.4.0
+twilio==6.26.2

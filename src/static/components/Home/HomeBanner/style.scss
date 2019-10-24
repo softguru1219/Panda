@@ -1,0 +1,11 @@
+.banner {
+  .banner-image {
+    float: left;
+    margin-left: 10px;
+    width: calc(33.33% - 10px);
+
+  }
+
+  margin-left: -10px;
+  padding-top: 7px;
+}

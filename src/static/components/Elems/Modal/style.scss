@@ -1,0 +1,23 @@
+.notification-modal {
+  border-radius: 5px;
+  text-align: center;
+  padding: 2rem;
+  i {
+    &.fa-exclamation-triangle {
+      color: $color-topbar-hover;
+    }
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .error-modal-content {
+    padding-top: .5rem;
+  }
+
+  .btn.btn-default:first-child:not(.full-width) {
+    margin-right: .5rem;
+  }
+}

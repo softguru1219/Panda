@@ -1,0 +1,10 @@
+  .prod-wrapper {
+    @media (min-width: 1024px) {
+      flex: 0 0 20% !important;
+      max-width: 20% !important;
+    }
+    @media (min-width: 1440px) {
+      flex: 0 0 16.66666% !important;
+      max-width: 16.66666% !important;
+    }
+  }

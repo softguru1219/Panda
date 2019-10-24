@@ -1,0 +1,102 @@
+.product.product-summary {
+  display: block;
+  margin: 0 auto 2rem;
+  background: $bg-color-mini-product;
+  position: relative;
+
+  .product-img {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    
+    @media (max-width: 575px) {
+      float: left;
+      width: 50%;
+      padding-right: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .product-content {
+    @media (max-width: 575px) {
+      float: left;
+      width: 50%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .prod-summary .title-wrapper {
+    @media (min-width: 576px) {
+      height: 3.9rem;
+    }
+  }
+
+  .prod-summary h4 {
+    font-size: 1rem;
+    line-height: 1.3;
+    overflow: hidden;
+    //text-overflow: ellipsis;
+    //white-space: nowrap;
+  }
+
+  .prod-summary h4 {
+    /* hide text if it more than N lines  */
+    overflow: hidden;
+    /* for set '...' in absolute position */
+    position: relative;
+    /* use this value to count block height */
+    line-height: 1.3rem;
+    /* max-height = line-height (1.2) * lines max number (3) */
+    max-height: 3.7rem;
+    /* fix problem when last visible word doesn't adjoin right side  */
+    text-align: justify;
+    /* place for '...' */
+    margin-right: -1rem;
+    padding-right: 1rem;
+
+    &:before {
+      content: '...';
+      position: absolute;
+      right: 1rem;
+      //right: 0;
+      bottom: 0;
+      line-height: 1.4rem;
+      font-size: 1.4rem;
+      background: white;
+    }
+
+    &:after {
+      /* points in the end */
+      content: '';
+      /* absolute position */
+      position: absolute;
+      /* set position to right bottom corner of text */
+      right: 1rem;
+      /* set width and height */
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-top: 0.2rem;
+      /* bg color = bg color under block */
+      background: white;
+    }
+  }
+
+  .btn-groups button.btn {
+    padding: .35rem .5rem;
+    span {
+      display: block;
+      img {
+        max-width: 26px;
+      }
+    }
+
+    &.btn-add-wishlist {
+      color: $color-red1;
+    }
+
+    &.btn-add-compare {
+      color: $color-blue1;
+    }
+  }
+}

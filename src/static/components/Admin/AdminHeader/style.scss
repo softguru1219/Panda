@@ -1,0 +1,44 @@
+.admin-header {
+  border-bottom: solid 1px $color-white-dark;
+  position: sticky;
+  padding: .5rem 0 .5rem 2rem;
+
+  img {
+    display: block;
+    height: 3rem;
+    width: auto;
+  }
+
+  > li {
+    display: block;
+    float: left;
+    width: 5rem;
+    text-align: center;
+
+    button.btn {
+      width: 3rem;
+      height: 3rem;
+      > i {
+        line-height: 3rem;
+        font-size: 1.5rem;
+      }
+    }
+
+    .span-link {
+      line-height: 3rem;
+      padding: 0 1rem;
+    }
+
+    &.inp-admin-header-search {
+      width: calc(100% - 15rem);
+
+      &.wide {
+        width: calc(100% - 5rem);
+      }
+
+      input {
+        height: 3rem;
+      }
+    }
+  }
+}

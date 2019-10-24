@@ -1,0 +1,79 @@
+.compare-basket {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    transition: all .1s ease;
+    @media (max-width: 575px) {
+        width: 75px;
+        height: 320px;
+        top: calc(50% - 160px);
+        left: 0;
+    }
+    > .container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        max-width: 500px;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        background: $bg-color-compare-basket;
+        @include bs-content;
+
+        @media (max-width: 575px) {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            padding: 5px !important;
+            border-top-left-radius: 0;
+            border-bottom-right-radius: 5px;
+            
+        }
+        
+        .compare-product {
+            height: 65px;
+            border: solid 1px $color-silver;
+            position: relative;
+
+            @media (max-width: 575px) {
+                width: 65px;
+                margin-bottom: 5px;
+            }
+            > .compare-product-hover {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 0;
+                text-align: center;
+                transition: all .1s ease;
+                background: rgba(240,240,240,0.8);
+                font-size: 20px;
+                line-height: 63px;
+                color: $color-btn-close-hover;
+                border: none;
+            }
+
+            &:hover {
+                > .compare-product-hover {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            .prod-img {
+                position: relative;
+                text-align: center;
+                > img {
+                    max-width: 60px;
+                }
+            }
+        }
+
+        .btn {
+            line-height: 1.875rem;
+            font-size: $fs-sm;
+        }
+    }
+}

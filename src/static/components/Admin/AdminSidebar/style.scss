@@ -1,0 +1,44 @@
+.admin-sidebar-content {
+  height: 100%;
+  background: #fff;
+  width: 14rem;
+
+  li {
+
+    &:first-child {
+      line-height: 4rem;
+    }
+
+    .span-link {
+      display: block;
+      font-size: 1.2rem;
+      line-height: 3rem;
+      padding-left: 1.5rem;
+      border-left: solid 2px transparent;
+      i {
+        margin-right: 1rem;
+      }
+      &:hover {
+        border-left-color: $color-topbar-hover;
+      }
+    }
+  }
+
+  .admin-header-brand {
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    img{
+      height: 3rem;
+      width: auto;
+      vertical-align: middle;
+    }
+
+    span {
+      color: $color-brand;
+      font-size: 1.5rem;
+      line-height: 3rem;
+      vertical-align: middle;
+    }
+  }
+}

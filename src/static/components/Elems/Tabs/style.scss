@@ -1,0 +1,29 @@
+.tabs {
+  > .tab-list {
+    padding-left: 0;
+  }
+  
+  > .tab-list > .tab-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+
+    color: $color-vertical-tab-text;
+
+    &:hover,
+    &.tab-list-active {
+      border-bottom: solid 3px $color-vertical-tab-text-hover;
+      color: $color-vertical-tab-text-hover;
+    }
+
+    &:hover {
+      background: $bg-color-vertical-tab-text-hover;
+    }
+  }
+  
+  > .tab-content {
+    padding: 2rem;
+  }
+}

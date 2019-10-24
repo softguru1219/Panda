@@ -1,0 +1,13 @@
+.user-status-details {
+  .btn-show-detail {
+    color: $color-red1 !important;
+    text-decoration: underline !important;
+    line-height: 2rem;
+  }
+
+  .user-status-search-header {
+    .period-select, .pagination-info {
+      display: inline-block;
+    }
+  }
+}

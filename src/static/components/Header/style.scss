@@ -1,0 +1,76 @@
+.header {
+  .middle-content {
+    padding: 2rem 0 .5rem;
+
+    .brand {
+      @media (max-width: $desktop-resolution) {
+        display: none;
+      }
+      > span {
+        display: block;
+        width: 75px;
+      }
+    }
+
+    .d-inline-block {
+      vertical-align: top;
+    }
+
+    .brand,
+    .header-links,
+    .search-container {
+      display: block;
+      float: left;
+      margin-bottom: 1.5rem;
+    }
+
+    .brand,
+    .search-container {
+      margin-right: 2rem;
+    }
+
+    .brand,
+    .brand > span,
+    .header-links,
+    .search-container {
+      @media (max-width: 560px) {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media (max-width: $desktop-resolution) {
+      display: none;
+    }
+
+    .header-link {
+      border-left: dotted 1px $color-silver-dark;
+      color: $color-silver-dark;
+      display: inline-block;
+      padding: 0 1.5rem;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      > i {
+        display: block;
+        font-size: 1.6rem;
+        margin-bottom: .5rem;
+
+        &.fa-gift {
+          color: $color-red-light;
+        }
+
+        &.fa-angellist {
+          color: $color-yellow;
+        }
+
+        &.fa-forumbee {
+          color: $color-blue-dark;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/bootstrap-reboot";
+
+@import "~react-phone-number-input/style";
+@import "~react-responsive-ui/bundle/style";
+@import "~rc-slider/assets/index";
+@import "~rc-tooltip/assets/bootstrap";
+@import "~react-datepicker/dist/react-datepicker";
+@import "~video-react/styles/scss/video-react";
+@import "~react-draft-wysiwyg/dist/react-draft-wysiwyg";
+@import "~react-perfect-scrollbar/dist/css/styles.min";
+@import "~rc-pagination/assets/index";
+@import "~react-table/react-table";
+@import '~react-table-hoc-fixed-columns/lib/styles';
+@import '~react-confirm-alert/src/react-confirm-alert';
+
+
+@import "slick/slick";
+@import "slick/slick-theme";
+
+@import "components/font-awesome/fontawesome";
+
+@import "config/reset";
+@import "config/fonts";
+@import "config/typography";
+
+
+@import "theme/base";
+@import "theme/login";
+@import "theme/navbar";
+@import "theme/footer";
+@import "theme/product";
+@import "theme/button";
+@import "theme/form";
+
+@import "utils/margins";

@@ -1,0 +1,44 @@
+.product-image {
+  max-width: 80%;
+  margin: 0 auto;
+
+  .large {
+    margin-bottom: 0.5rem;
+    position: relative;
+
+    .brand {
+      background: $color-blue1;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5rem;
+      left: -5px;
+      padding: 0.5rem;
+      position: absolute;
+      top: 5px;
+    }
+  }
+  .custom-arrow-prev {
+    left: -25px;
+    right: auto;
+  }
+  .custom-arrow-next {
+      left: auto;
+      right: -25px;
+  }
+
+  .custom-arrow {
+    color: $color-silver;
+    top: 50%;
+    bottom: auto;
+    &:hover, &:focus
+    { 
+        color: $color-silver-dark !important;
+    }
+  }
+
+  .slick-list .video-react .video-react-big-play-button {
+    font-size: .5rem;
+    top: 0;
+    left: 0;
+  }
+}

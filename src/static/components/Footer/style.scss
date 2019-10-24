@@ -1,0 +1,42 @@
+.footer {
+  background: $bg-color-footer;
+  color: $color-silver-dark;
+  padding: 2rem 15px;
+  margin-top: 5rem;
+  width: 100%;
+
+  @media (min-width: 576px) {
+    bottom: 0;
+    position: absolute;
+    height: 13.5rem;
+  }
+
+  .footer-brand {
+    display: block;
+    img {
+      width: 100px;
+    }
+  }
+  h4 {
+    margin-bottom: 1.625rem;
+    span {
+      color: $color-footer-bold-text;
+      font-size: 1.2rem;
+      display: block;
+      padding-left: .5rem;
+      border-left: solid 2px $color-footer-bold-text;
+      font-weight: 900;
+
+      &:hover {
+        color: $color-footer-hover;
+        border-color: $color-footer-hover;
+      }
+    }
+  }
+  .list li {
+    margin-bottom: 1rem;
+    span {
+      white-space: pre;
+    }
+  }
+}

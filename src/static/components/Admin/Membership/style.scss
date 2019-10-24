@@ -1,0 +1,15 @@
+.admin-membership {
+  .membership-color {
+    width: 35px;
+    height: 20px;
+    padding: 4px;
+    border: solid 1px $color-silver-darkest;
+  }
+
+  .feature-list {
+    list-style: circle;
+    > li {
+      padding: .5rem 0;
+    }
+  }
+}

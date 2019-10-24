@@ -1,0 +1,15 @@
+.membership-edit-modal {
+  .btn-color-picker {
+    border: solid 1px $color-silver-lighter;
+    height: 25px;
+    width: 40px;
+    padding: 5px;
+    position: relative;
+
+  }
+  .color-picker {
+    top: 100%;
+    left: 0;
+    position: absolute;
+  }
+}

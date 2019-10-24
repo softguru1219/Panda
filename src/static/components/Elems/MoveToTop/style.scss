@@ -1,0 +1,23 @@
+.sweet-loading {
+    background: $bg-color-spinner;
+    opacity: 0;
+    visibility: hidden;
+    height: 100%;
+    left: 0;
+    text-align: center;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    transition: all .5s ease;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .spinner-logo {
+        width: 75px;
+        margin-bottom: 3rem;
+    }
+}

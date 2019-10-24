@@ -1,0 +1,8 @@
+.span-link {
+    color: $color-topbar;
+    cursor: pointer;
+    
+    &:hover {
+        color: $color-topbar-hover;
+    }
+}

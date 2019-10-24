@@ -1,0 +1,17 @@
+.sidebar-filter {
+  @include bs-content;
+  background: $bg-color-sidebar;
+  padding: 1.5rem 15px;
+
+  .sub-title {
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+    border-bottom: solid 1px $color-silver;
+    margin-bottom: 3rem;
+  }
+
+  label {
+    margin-bottom: .5rem;
+  }
+
+}

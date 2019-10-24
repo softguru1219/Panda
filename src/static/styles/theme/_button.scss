@@ -1,0 +1,178 @@
+.btn-default {
+  background: $bg-color-btn-default;
+  border: solid 1px $color-btn-default-border;
+  color: $color-btn-default-text;
+  line-height: 2rem;
+  padding: 0 1.5rem;
+
+  &:hover {
+      background: $bg-color-btn-default-hover;
+      border-color: $color-btn-default-border;
+      color: $color-btn-default-text-hover;
+  }
+
+  &.type2 {
+    border: none;
+    color: $bg-color-btn-default;
+    background: $color-btn-default-text;
+    &:hover {
+      background: $bg-color-btn-default;
+      color: $color-btn-default-text;
+    }
+  }
+
+  &.sm {
+    padding: 0 .5rem;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+}
+
+.btn-reset {
+  padding: 0 1.5rem;
+  line-height: 2rem;
+  border-color: $color-silver;
+  color: $color-silver;
+
+  &:hover {
+      background-color: $color-silver;
+      color: $color-white;
+  }
+}
+
+.btn-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  padding: 0;
+
+  &.type2 {
+    color: $color-btn-default-text-hover;
+    background: $bg-color-btn-default-hover;
+
+    &:hover {
+      background: $bg-color-btn-default;
+      color: $color-btn-default-text;
+    }
+  }
+
+  &.type1 {
+    background: $bg-color-btn-default;
+    border: solid 1px $color-btn-default-border;
+    color: $color-btn-default-text;
+
+    &:hover {
+      background: $bg-color-btn-default-hover;
+      border-color: $color-btn-default-border;
+      color: $color-btn-default-text-hover;
+    }
+  }
+
+  &.type3 {
+    color: $color-btn-default-text;
+    background: $bg-color-btn-default-hover;
+
+    &:hover {
+      background: #fff;
+      color: $color-btn-default-text-hover;
+    }
+  }
+
+  > i {
+    line-height: 2rem;
+    font-size: 1rem;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &.sm {
+    width: 1.5rem;
+    height: 1.5rem;
+    > i {
+      line-height: 1.5rem;
+      font-size: 0.8rem;
+    } 
+  }
+
+  &.lg {
+    line-height: 3rem;
+  }
+
+}
+
+.btn {
+  outline: none !important;
+}
+
+.btn.full-width {
+  width: 100%;
+}
+
+.btn.btn-hover {
+  color: $color-btn-hover;
+  border: solid 1px $color-btn-hover;
+}
+
+.btn.btn-full-width {
+  width: 100%;
+  text-align: center;
+  padding: 0 !important;
+}
+
+.btn.btn-no-border {
+  border: none !important;
+}
+
+.btn-icon-text {
+  padding: 0 2rem 0 1rem;
+  position: relative;
+  border: solid 1px $color-blue;
+  line-height: 2rem;
+
+  &.sm {
+    line-height: 1.5rem;
+    padding: 0 2rem 0 1rem;
+  }
+
+  &.lg {
+    line-height: 3rem;
+  }
+
+  &.type1 {
+    background: $bg-color-btn-default;
+    border: solid 1px $color-btn-default-border;
+    color: $color-btn-default-text;
+
+    &:hover {
+      background: $bg-color-btn-default-hover;
+      border-color: $color-btn-default-border;
+      color: $color-btn-default-text-hover;
+    }
+  }
+
+  &.type2 {
+    border: solid 1px $color-btn-default-border;
+    background: $bg-color-btn-default-hover;
+    color: $color-black1;
+    
+    &:hover {
+      color: $color-btn-default-border;
+      background: #fff;
+
+      > i {
+        color: $color-btn-default-border;
+      }
+    }
+  }
+
+  > i {
+    position: absolute;
+    top: calc(50% - .5rem);
+    right: 1rem;
+  }
+
+}
+

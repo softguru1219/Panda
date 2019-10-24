@@ -1,0 +1,301 @@
+
+$dull-black: #4A4A4A !default;
+$black-base: #000000 !default;
+$white-base: #ffffff !default;
+
+
+$peter-river: #3498db;
+$turquise: #1abc9c;
+$green-sea: #16a085;
+$wet-asphalt: #34495e;
+$concrete: #95a5a6;
+$clouds: #ecf0f1;
+$silver: #bdc3c7;
+$midnight-blue: #2c3e50;
+
+/** Animation stuffs */
+$default-animation-time: 0.2s !default;
+$default-transition-time: 0.2s !default;
+$default-shake-distance: 8px !default;
+$default-short-slide-distance: 40px !default;
+$default-cubic-in: cubic-bezier(0.5, 1.8, 0.9, 0.8);
+
+/* From compass */
+@function compact($var-1,        $var-2: false,
+                  $var-3: false, $var-4: false,
+                  $var-5: false, $var-6: false,
+                  $var-7: false, $var-8: false,
+                  $var-9: false, $var-10: false) {
+  $full: $var-1;
+  $vars: $var-2, $var-3, $var-4, $var-5,
+         $var-6, $var-7, $var-8, $var-9, $var-10;
+
+  @each $var in $vars {
+    @if $var {
+      $full: $full, $var;
+    }
+  }
+  @return $full;
+}
+
+
+@function set-arglist-default($arglist, $default) {
+  $default-index: index($arglist, default);
+  @if $default-index {
+    $arglist: set-nth($arglist, $default-index, $default)
+  }
+  @return if(length($arglist) > 0, $arglist, $default);
+}
+
+
+
+$default-box-shadow-h-offset: 0 !default;
+$default-box-shadow-v-offset: 0 !default;
+$default-box-shadow-blur: 4px !default;
+$default-box-shadow-spread: null !default;
+$default-box-shadow-color: rgba(0, 0, 0, .15) !default;
+$default-box-shadow-inset: null !default;
+
+
+/** Box shadows */
+@function default-box-shadow() {
+  @return compact(if($default-box-shadow-inset, inset, null) $default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-color)
+}
+
+@mixin box-shadow($shadow...) {
+  $shadow: set-arglist-default($shadow, default-box-shadow());
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+@mixin menu-box-shadow() {
+  $shadow: default-box-shadow(), 0 2px 4px rgba(0, 0, 0, .29);
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+
+/* ========================================================= */
+/* Dropdown menu Source */
+/* ========================================================= */
+$dd-menu-sm-width: 150px !default;
+$dd-menu-md-width: 300px !default;
+$dd-menu-lg-width: 450px !default;
+$dd-menu-z-index: 7;
+$dd-text-color: $black-base;
+$dd-list-color: $white-base;
+$dd-hover-color: $silver;
+$dd-hover-text-color: $black-base;
+
+$dd-inverse-text-color: $white-base;
+$dd-inverse-list-color: $midnight-blue;
+$dd-inverse-hover-color: $wet-asphalt;
+$dd-inverse-hover-text-color: $white-base;
+
+.dd-menu {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+
+  &.dd-menu-right {
+    text-align: right;
+
+    .dd-menu-items {
+      right: 0;
+
+      button, a {
+        text-align: right;
+      }
+    }
+  }
+
+  &.dd-menu-left {
+    text-align: left;
+
+    .dd-menu-items {
+      left: 0;
+      button, a {
+        text-align: left;
+      }
+    }
+  }
+
+  &.dd-menu-center {
+    .dd-menu-items {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &.dd-menu-sm {
+    .dd-menu-items {
+      width: $dd-menu-sm-width;
+    }
+  }
+
+  &.dd-menu-md {
+    .dd-menu-items {
+      width: $dd-menu-md-width;
+    }
+  }
+
+  &.dd-menu-lg {
+    .dd-menu-items {
+      width: $dd-menu-lg-width;
+    }
+  }
+
+  &.dd-menu-inverse {
+    > .dd-menu-items {
+      > ol,
+      > ul {
+        color: $dd-inverse-text-color;
+        background-color: $dd-inverse-list-color;
+
+        > li {
+          &:hover,
+          > button:focus,
+          > a:focus {
+            color: $dd-inverse-hover-text-color;
+            background-color: $dd-inverse-hover-color;
+          }
+        }
+      }
+    }
+
+    li.separator {
+      background-color: $wet-asphalt;
+    }
+  }
+
+  .dd-menu-items {
+    position: absolute;
+    z-index: $dd-menu-z-index;
+    margin-top: 0.5em;
+
+    > * {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: $dd-list-color;
+      color: $dd-text-color;
+      @include menu-box-shadow();
+    }
+  }
+
+  li.separator {
+    content: '';
+    height: 1px;
+    background-color: rgba(0, 0, 0, .15);
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+}
+
+/* ========================================================= */
+/* Dropdown menu Animations */
+/* ========================================================= */
+.grow-from-left-enter {
+  transform: scale(0);
+  transform-origin: 0 0;
+  transition: transform $default-transition-time $default-cubic-in;
+
+  &.grow-from-left-enter-active {
+    transform: scale(1);
+  }
+}
+
+.grow-from-left-leave {
+  transform: scale(1);
+  transform-origin: 0 0;
+  transition: transform $default-transition-time ease-out;
+
+  &.grow-from-left-leave-active {
+    transform: scale(0);
+  }
+}
+
+.grow-from-right-enter {
+  transform: scale(0);
+  transform-origin: 100% 0;
+  transition: transform $default-transition-time $default-cubic-in;
+
+  &.grow-from-right-enter-active {
+    transform: scale(1);
+  }
+}
+
+.grow-from-right-leave {
+  transform: scale(1);
+  transform-origin: 100% 0;
+  transition: transform $default-transition-time ease-out;
+
+  &.grow-from-right-leave-active {
+    transform: scale(0);
+  }
+}
+
+.grow-from-center-enter {
+  transform: scale(0);
+  transform-origin: 50% 0;
+
+  &.grow-from-center-enter-active {
+
+  transition: transform $default-transition-time $default-cubic-in;
+    transform: scale(1);
+  }
+}
+
+.grow-from-center-leave {
+  transform: scale(1);
+  transform-origin: 50% 0;
+
+  &.grow-from-center-leave-active {
+  transition: transform $default-transition-time $default-cubic-in;
+    transform: scale(0);
+  }
+}
+
+/* ========================================================= */
+/* Pen Stylings */
+/* ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.clear-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.tab {
+  > button {
+    border-radius: .8rem;
+    background-color: $color-black3;
+    position: relative;
+    color: #fff;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 0;
+
+    border-bottom: 2px solid $color-black1;
+    box-shadow: inset 0 -2px $color-black3;
+
+    > i {
+      font-size: 1.3rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  &:active,
+  &.active {
+    > button {
+      top: 1px;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}

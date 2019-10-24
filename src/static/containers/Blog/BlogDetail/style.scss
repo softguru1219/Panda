@@ -1,0 +1,18 @@
+.blog-detail {
+    .blog-img {
+        img {
+            max-width: 200px;
+        }
+    }
+    .sub-title {
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem;
+        border-bottom: solid 1px $color-sub-title-border;
+    }
+
+    .title {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
