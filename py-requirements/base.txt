@@ -24,7 +24,7 @@ django-rest-knox==3.0.3
 django-filter==2.1.0
 
 # for Image Field
-Pillow==5.4.1
+Pillow==8.2.0
 
 # For schedule job.
 celery==4.2.1
