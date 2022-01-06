@@ -27,6 +27,6 @@ django-filter==2.1.0
 Pillow==5.4.1
 
 # For schedule job.
-celery==4.2.1
+celery==5.2.2
 django-celery-beat==1.4.0
 twilio==6.26.2
